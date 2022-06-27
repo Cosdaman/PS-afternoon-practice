@@ -24,6 +24,9 @@ print(prog_lang)
 # 3. Filter the list so that it only contains languages with 'a' in it.
 #[('Java', 13), ('JavaScript', 2019), ('Scala', 2.13)]
 
+prog_lang_filter = list(filter(lambda x: 'a' in x[0], prog_lang))
+print(prog_lang_filter)
+
 # 4. Filter the list so that it only contains languages whose version is in integer form.
 #[('Java', 13), ('JavaScript', 2019)]
 
