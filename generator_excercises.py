@@ -13,9 +13,9 @@ def primes_gen():
                 yield num
 
 
-# gen = primes_gen()
-# for _ in range(10):
-#     print(next(gen), end=' ')
+gen = primes_gen()
+for _ in range(10):
+    print(next(gen), end=' ')
 
 
 # Expected output
