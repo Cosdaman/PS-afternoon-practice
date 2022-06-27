@@ -13,9 +13,9 @@ def primes_gen():
                 yield num
 
 
-gen = primes_gen()
-for _ in range(10):
-    print(next(gen), end=' ')
+# gen = primes_gen()
+# for _ in range(10):
+#     print(next(gen), end=' ')
 
 
 # Expected output
@@ -27,7 +27,15 @@ for _ in range(10):
 # the input string. It should generate the letters in the same order as
 # from the input string.
 
-# for letter in unique_letters('hello'):
-#     print(letter, end=' ')
+def unique_letters(inputStr):
+    usedChars = set()
+    for i in range(len(inputStr)):
+        if not inputStr[i] in usedChars:
+            usedChars.add(inputStr[i])
+            yield inputStr[i]
+
+
+for letter in unique_letters('hello'):
+    print(letter, end=' ')
 # Expected output
 # h e l o
